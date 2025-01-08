@@ -46,7 +46,6 @@ for card_url in list_cards:
     if response.status_code != 200:
         print(f"Failed to fetch {card_url}. Status code: {response.status_code}")
         continue
-    
     soup = BeautifulSoup(response.text, 'lxml')
     data = soup.find('div', class_='summary entry-summary')
     if data:
