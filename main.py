@@ -55,7 +55,6 @@ for card_url in list_cards:
         sizes = data.find('ul').get('data-attribute_values')  # .get (name HTML atribute)
         description = data.find('div', class_ = 'product-short-description-content').text
 
-
         print(f'Name: {name}, Price: {price}, Size: {sizes}, Description: {description}')
     else:
         print("No data found")
